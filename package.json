@@ -1,0 +1,15 @@
+{
+  "name": "uoft-timetableserver",
+  "version": "1.0.0",
+  "description": "A server for my UofT-TimeTable iOS app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tianqi Liu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.3"
+  }
+}
