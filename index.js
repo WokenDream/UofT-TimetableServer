@@ -16,6 +16,13 @@ io.on('connection', function (socket) {
             socket.emit('chat message', timetablesJSON);
         });
     });
+    socket.on('iOS', function(msg) {
+        console.log('iOS connected');
+        results.then(function(timetablesJSON) {
+            console.log('waiting for crawler');
+            socket.emit('iOS', timetablesJSON);
+        })
+    });
 });
 
 server.listen(3000, function() {
