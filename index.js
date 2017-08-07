@@ -14,6 +14,9 @@ io.on('connection', function (socket) {
         results.then(function(timetablesJSON) {
             console.log('waiting for crawler');
             socket.emit('chat message', timetablesJSON);
+        }).catch( function(error) {
+            console.log("error from cralwer: " + error);
+            socket.emit('crawler error');
         });
     });
     socket.on('iOS', function(msg) {
@@ -21,6 +24,9 @@ io.on('connection', function (socket) {
         results.then(function(timetablesJSON) {
             console.log('waiting for crawler');
             socket.emit('iOS', timetablesJSON);
+        }).catch(function(error) {
+            console.log("error from cralwer: " + error);
+            socket.emit('crawler error');
         })
     });
 });
