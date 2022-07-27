@@ -1,2 +1,2 @@
 # UofT-TimeTableServer
-A server for my mobile app.
+A server for my mobile app, UofT-TimetableCrawler.
